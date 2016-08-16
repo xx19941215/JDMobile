@@ -1,0 +1,344 @@
+/*全局样式*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  /*清除点击的默认高亮*/
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: .14rem;
+  font-family:"Microsoft YaHei","sans-serif";
+  color:#000;
+}
+a {
+  text-decoration: none;
+  color:#000;
+}
+ul, ol {
+  list-style:none;
+}
+input, textarea {
+  border:none;
+  resize: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: block;
+  height:0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+[class^="icon_"] {
+  background: url("../images/sprites.png") no-repeat;
+  -webkit-background-size:2rem 2rem;
+  background-size:2rem 2rem;
+}
+.m_l10 {
+  margin-left: .1rem;
+}
+.m_r10 {
+  margin-right: .1rem;
+}
+.m_t10 {
+  margin-top: .1rem;
+}
+.m_b10 {
+  margin-bottom: .1rem;
+}
+.f_left {
+  float: left;
+}
+.f_right {
+  float: right;
+}
+/*头部通栏*/
+.jd_topBar {
+  height: .45rem;
+  width: 100%;
+  background: url("../images/header-bg.png") repeat-x;
+  /*图片缩小一倍是为了显示更清晰不是为了满足高度要求*/
+  background-size: 0.01rem .44rem;
+  border-bottom: 0.01rem solid #e0e0e0;
+  position: absolute;
+
+  z-index: 1000;
+}
+/*返回按钮*/
+.jd_topBar .icon_back {
+  background-position: -.2rem 0;
+  width: .2rem;
+  height: .2rem;
+  position: absolute;
+  margin: .12rem .1rem;
+  top: 0;
+  left: 0;
+}
+/*搜索*/
+.jd_topBar form {
+  width: 100%;
+  padding: 0 .4rem;
+  height: .44rem;
+}
+.jd_topBar form input {
+  width: 100%;
+  height: .3rem;
+  border-radius: 0.02rem;
+  margin-top: 0.07rem;
+  border: 0.01rem solid #BFBFBF;
+}
+.jd_topBar h2 {
+  text-align: center;
+  font-size: .16rem;
+  font-family:sans-serif;
+  font-weight: inherit;
+  line-height: .44rem;
+}
+/*菜单*/
+.jd_topBar .icon_menu {
+  background-position: -.6rem 0;
+  width: .4rem;
+  height: .44rem;
+  position: absolute;
+  padding: .12rem .1rem;
+  background-clip: content-box;
+  background-origin: content-box;
+  top: 0;
+  right: 0;
+}
+
+body {
+  background: #F0F2F5;
+  margin-bottom: .62rem;
+}
+.jd_topBar {
+  position: static;
+}
+/*安全提示*/
+.jd_safeTip {
+  width: 100%;
+  height: .34rem;
+  line-height: .34rem;
+  font-size:.13rem;
+  text-align: center;
+  background: #fff;
+  border-bottom:.01rem solid #E0E0E0;
+}
+.jd_safeTip p {
+  padding-left:.25rem;
+  position: relative;
+  width: 2.4rem;
+  display: inline;
+}
+.jd_safeTip p::before {
+  content: "";
+  width: .18rem;
+  height: .18rem;
+  background: url("../images/safe_icon.png");
+  background-size:.18rem .18rem;
+  position: absolute;
+  left: 0;
+  top: 0rem;
+}
+/*共用复选框*/
+.jd_check_box {
+  width: .2rem;
+  height: .2rem;
+  display: block;
+  background: url("../images/shop-icon.png") no-repeat;
+  background-size: .5rem 1rem;
+  background-position: 0 0;
+  position: absolute;
+  top: .2rem;
+  left: .1rem;
+}
+.jd_check_box[checked] {
+  background-position: -0.25rem 0;
+}
+/*店铺tit*/
+.jd_shop {
+  margin-top: .1rem;
+  background: #fff;
+}
+.jd_shop .jd_shop_tit {
+  height: .36rem;
+  border-bottom:0.01rem solid #e0e0e0;
+  border-top:0.01rem solid #e0e0e0;
+
+  position: relative;
+}
+.jd_shop .jd_shop_tit .tit_check {
+  width: .4rem;
+  height: .35rem;
+  position: absolute;
+  left: 0;
+}
+.jd_shop .jd_shop_tit .tit_check .jd_check_box {
+  position: absolute;
+  top: 0.07rem;
+  left: .1rem;
+}
+.jd_shop .jd_shop_tit .tit_name {
+  float: left;
+  padding-left:.4rem;
+  width: 100%;
+}
+.jd_shop .jd_shop_tit .tit_name .img_logo {
+  width: .15rem;
+  height: .13rem;
+  float: left;
+  margin-top: .1rem;
+}
+.jd_shop .jd_shop_tit .tit_name .name {
+  float: left;
+  font-size: .13rem;
+  margin-top: 0.08rem;
+}
+.jd_shop .jd_shop_tit .tit_name .tip {
+  float: right;
+  margin-top: 0.08rem;
+  margin-right:.1rem;
+  color: #d8505c;
+}
+/*商品*/
+.jd_shop .jd_shop_con {
+  border-bottom:0.01rem solid #E0E0E0;
+  position: relative;
+}
+.jd_shop .jd_shop_con .con_check {
+  position: absolute;
+  width: .4rem;
+  top: 0;
+  left: 0;
+}
+.jd_shop .jd_shop_con .con_product {
+  margin-top: .1rem;
+  padding-left: .4rem;
+  padding-right: .1rem;
+  padding-bottom: .1rem;
+}
+.jd_shop .jd_shop_con .con_product .con_product_img {
+  float: left;
+  width: .8rem;
+  height: .8rem;
+  margin-right: .1rem;
+}
+.jd_shop .jd_shop_con .con_product .con_product_img img {
+  width: 100%;
+  height: 100%;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box {
+  display: table;
+  width: calc(100% - .9rem);
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .name {
+  height: .3rem;
+  line-height: .15rem;
+  font-size: .13rem;
+  overflow: hidden;
+  display: block;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box p {
+  margin-top: 0.05rem;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option {
+  width: 100%;
+  height: .24rem;
+  margin-top: 0.05rem;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option .change_box {
+  float: left;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option .change_box_left {
+  width: .32rem;
+  height: .24rem;
+  border: 0.01rem solid #E0E0E0;
+  border-top-left-radius: 0.02rem;
+  border-bottom-left-radius: 0.02rem;
+  float: left;
+  text-align: center;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option input {
+  width: .32rem;
+  height: .24rem;
+  border-top: 0.01rem solid #E0E0E0;
+  border-bottom: 0.01rem solid #E0E0E0;
+  float: left;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option .change_box_right {
+  width: .32rem;
+  height: .24rem;
+  border: 0.01rem solid #E0E0E0;
+  border-top-right-radius: 0.02rem;
+  border-bottom-right-radius: 0.02rem;
+  float: left;
+  text-align: center;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option .delete_box {
+  float: right;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option .delete_box  .delete_box_top {
+  width: .2rem;
+  height: 0.05rem;
+  background: url("../images/delete_up.png") no-repeat;
+  background-size: .2rem 0.05rem;
+  margin-left:-0.01rem;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option .delete_box  .delete_box_bot {
+  width: .18rem;
+  height: .18rem;
+  background: url("../images/delete_down.png") no-repeat;
+  background-size: .18rem .18rem;
+  margin-top: -0.03rem;
+}
+.jd_amount {
+  position: fixed;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  height: .62rem;
+  background: #313131;
+  color:#fff;
+}
+.jd_amount .amount_check {
+  width: .8rem;
+  height: .62rem;
+  position: absolute;
+  line-height: .6rem;
+}
+.jd_amount .amount_check p {
+  padding-left: 2.5em;
+}
+.jd_amount .amount_info {
+  padding-left: .8rem;
+  margin-top: .1rem;
+}
+.jd_amount .amount_info p b {
+  font-weight: normal;
+  font-size: .16rem;
+}
+.jd_amount .amount_submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1.2rem;
+  height: .62rem;
+  background: #D8505C;
+  font-size: .2rem;
+  line-height:.62rem;
+  text-align: center;
+  color: #fff;
+}
+.jd_amount .amount_submit span {
+  font-size: .12rem;
+
+}

@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--<script>-->
+
+        <!--var iScale = 1;-->
+        <!--iScale = iScale / window.devicePixelRatio;-->
+        <!--document.write('<meta name="viewport"  content="width=device-width,user-scalable=no,initial-scale=' + iScale + ',minimum-scale=' + iScale + ',maximum-scale=' + iScale + '">')-->
+
+    <!--</script>-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/cart2.css">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+              resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+              recalc = function () {
+                  var clientWidth = docEl.clientWidth ;
+                  if (!clientWidth) return;
+                  if(clientWidth>=640 || window.devicePixelRatio > 1){
+                      docEl.style.fontSize = '100px';
+                  }else {
+                      docEl.style.fontSize = 100 * (clientWidth / 320) + 'px';
+                  }
+              };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <header class="jd_topBar">
+        <a href="" class="icon_back"></a>
+
+        <h2>购物车</h2>
+        <a href="" class="icon_menu"></a>
+    </header>
+    <div class="jd_safeTip">
+        <p>您正在安全环境中，请放心购物</p>
+    </div>
+    <div class="jd_shop">
+        <div class="jd_shop_tit">
+            <div class="tit_check">
+                <div class="jd_check_box"  checked></div>
+            </div>
+            <div class="tit_name">
+                <img class="img_logo" src="images/buy-logo.png" alt="">
+                <span class="name">京东自营</span>
+                <span class="tip">您享受满79免运费服务</span>
+            </div>
+        </div>
+        <div class="jd_shop_con">
+            <div class="con_check">
+                <div class="jd_check_box"></div>
+            </div>
+            <div class="con_product clearfix">
+                <a href="" class="con_product_img"><img src="images/detail01.jpg" alt=""></a>
+                <div class="con_product_box">
+                    <a href="" class="name">
+                        宾缇芬(BIN)2016新款韩版棉绸碎花森系大码收腰显瘦文艺范小清新连衣裙女 夏9817 牡丹花 L</a>
+                    <p class="price">&yen;1000</p>
+                    <div class="option clearfix">
+                        <div class="change_box clearfix">
+                            <span class="change_box_left">-</span>
+                            <input type="tel">
+                            <span class="change_box_right">+</span>
+                        </div>
+                        <div class="delete_box">
+                            <div class="delete_box_top"></div>
+                            <div class="delete_box_bot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jd_shop_con">
+            <div class="con_check">
+                <div class="jd_check_box"></div>
+            </div>
+            <div class="con_product clearfix">
+                <a href="" class="con_product_img"><img src="images/detail01.jpg" alt=""></a>
+                <div class="con_product_box">
+                    <a href="" class="name">
+                        宾缇芬(BIN)2016新款韩版棉绸碎花森系大码收腰显瘦文艺范小清新连衣裙女 夏9817 牡丹花 L</a>
+                    <p class="price">&yen;1000</p>
+                    <div class="option clearfix">
+                        <div class="change_box clearfix">
+                            <span class="change_box_left">-</span>
+                            <input type="tel">
+                            <span class="change_box_right">+</span>
+                        </div>
+                        <div class="delete_box">
+                            <div class="delete_box_top"></div>
+                            <div class="delete_box_bot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jd_shop">
+        <div class="jd_shop_tit">
+            <div class="tit_check">
+                <div class="jd_check_box"  checked></div>
+            </div>
+            <div class="tit_name">
+                <img class="img_logo" src="images/buy-logo.png" alt="">
+                <span class="name">京东自营</span>
+                <span class="tip">您享受满79免运费服务</span>
+            </div>
+        </div>
+        <div class="jd_shop_con">
+            <div class="con_check">
+                <div class="jd_check_box"></div>
+            </div>
+            <div class="con_product clearfix">
+                <a href="" class="con_product_img"><img src="images/detail01.jpg" alt=""></a>
+                <div class="con_product_box">
+                    <a href="" class="name">
+                        宾缇芬(BIN)2016新款韩版棉绸碎花森系大码收腰显瘦文艺范小清新连衣裙女 夏9817 牡丹花 L</a>
+                    <p class="price">&yen;1000</p>
+                    <div class="option clearfix">
+                        <div class="change_box clearfix">
+                            <span class="change_box_left">-</span>
+                            <input type="tel">
+                            <span class="change_box_right">+</span>
+                        </div>
+                        <div class="delete_box">
+                            <div class="delete_box_top"></div>
+                            <div class="delete_box_bot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jd_shop_con">
+            <div class="con_check">
+                <div class="jd_check_box"></div>
+            </div>
+            <div class="con_product clearfix">
+                <a href="" class="con_product_img"><img src="images/detail01.jpg" alt=""></a>
+                <div class="con_product_box">
+                    <a href="" class="name">
+                        宾缇芬(BIN)2016新款韩版棉绸碎花森系大码收腰显瘦文艺范小清新连衣裙女 夏9817 牡丹花 L</a>
+                    <p class="price">&yen;1000</p>
+                    <div class="option clearfix">
+                        <div class="change_box clearfix">
+                            <span class="change_box_left">-</span>
+                            <input type="tel">
+                            <span class="change_box_right">+</span>
+                        </div>
+                        <div class="delete_box">
+                            <div class="delete_box_top"></div>
+                            <div class="delete_box_bot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jd_amount">
+        <div class="amount_check">
+            <div class="jd_check_box"></div>
+            <p>全选</p>
+        </div>
+        <div class="amount_info">
+            <p><b>合计 : &yen;</b><span>0.00</span></p>
+            <p>总额 : &yen;<span>0.00</span>返现 : &yen;<span>0.00</span></p>
+        </div>
+
+        <a class="amount_submit">去结算(<span>0</span>)</a>
+
+    </div>
+</body>
+</html>

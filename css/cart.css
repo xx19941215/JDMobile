@@ -1,0 +1,325 @@
+/*弹出层动画*/
+@keyframes bounceInDown {
+  0%,60%,75%,90%,100% {
+    animation-timing-function: cubic-bezier(0.215,0.61,0.335,1);
+  }
+  0% {
+    opacity: 0;
+    transform:translate3d(0px,-3000px,0);
+    -webkit-transform:translate3d(0px,-3000px,0);
+  }
+}
+@-webkit-keyframes jumpOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+    -webkit-transform: translateY(-2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+  }
+  75% {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+  }
+  90% {
+    transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+    -webkit-transform: none;
+  }
+}
+
+.jumpOut {
+  animation: jumpOut 1s ease;
+}
+body {
+  background: #F0F2F5;
+  margin-bottom: 62px;
+}
+
+.jd_topBar {
+  position: static;
+}
+/*安全提示*/
+.jd_safeTip {
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  font-size:13px;
+  text-align: center;
+  background: #fff;
+  border-bottom:1px solid #E0E0E0;
+}
+.jd_safeTip p {
+  padding-left:25px;
+  position: relative;
+  width: 240px;
+  display: inline;
+}
+.jd_safeTip p::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: url("../images/safe_icon.png");
+  background-size:18px 18px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
+/*共用复选框*/
+.jd_check_box {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: url("../images/shop-icon.png") no-repeat;
+  background-size: 50px 100px;
+  background-position: 0 0;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+.jd_check_box[checked] {
+  background-position: -25px 0;
+}
+/*店铺tit*/
+.jd_shop {
+  margin-top: 10px;
+  background: #fff;
+}
+.jd_shop .jd_shop_tit {
+  height: 36px;
+  border-bottom:1px solid #e0e0e0;
+  border-top:1px solid #e0e0e0;
+
+  position: relative;
+}
+.jd_shop .jd_shop_tit .tit_check {
+  width: 40px;
+  height: 35px;
+  position: absolute;
+  left: 0;
+}
+.jd_shop .jd_shop_tit .tit_check .jd_check_box {
+  position: absolute;
+  top: 7px;
+  left: 10px;
+}
+.jd_shop .jd_shop_tit .tit_name {
+  float: left;
+  padding-left:40px;
+  width: 100%;
+}
+.jd_shop .jd_shop_tit .tit_name .img_logo {
+  width: 15px;
+  height: 13px;
+  float: left;
+  margin-top: 10px;
+}
+.jd_shop .jd_shop_tit .tit_name .name {
+  float: left;
+  font-size: 13px;
+  margin-top: 8px;
+}
+.jd_shop .jd_shop_tit .tit_name .tip {
+  float: right;
+  margin-top: 8px;
+  margin-right:10px;
+  color: #d8505c;
+}
+/*商品*/
+.jd_shop .jd_shop_con {
+  border-bottom:1px solid #E0E0E0;
+  position: relative;
+}
+.jd_shop .jd_shop_con .con_check {
+  position: absolute;
+  width: 40px;
+  top: 0;
+  left: 0;
+}
+.jd_shop .jd_shop_con .con_product {
+  margin-top: 10px;
+  padding-left: 40px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.jd_shop .jd_shop_con .con_product .con_product_img {
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+.jd_shop .jd_shop_con .con_product .con_product_img img {
+  width: 100%;
+  height: 100%;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box {
+  display: table;
+  width: calc(100% - 90px);
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .name {
+  height: 30px;
+  line-height: 15px;
+  font-size: 13px;
+  overflow: hidden;
+  display: block;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box p {
+  margin-top: 5px;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option {
+  width: 100%;
+  height: 24px;
+  margin-top: 5px;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option .change_box {
+  float: left;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option .change_box_left {
+  width: 32px;
+  height: 24px;
+  border: 1px solid #E0E0E0;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  float: left;
+  text-align: center;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option input {
+  width: 32px;
+  height: 24px;
+  border-top: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+  float: left;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option .change_box_right {
+  width: 32px;
+  height: 24px;
+  border: 1px solid #E0E0E0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  float: left;
+  text-align: center;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option .delete_box {
+  float: right;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option .delete_box  .delete_box_top {
+  width: 20px;
+  height: 5px;
+  background: url("../images/delete_up.png") no-repeat;
+  background-size: 20px 5px;
+  margin-left:-1px;
+}
+.jd_shop .jd_shop_con .con_product .con_product_box .option .delete_box  .delete_box_bot {
+  width: 18px;
+  height: 18px;
+  background: url("../images/delete_down.png") no-repeat;
+  background-size: 18px 18px;
+  margin-top: -3px;
+}
+.jd_amount {
+  position: fixed;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  height: 62px;
+  background: #313131;
+  color:#fff;
+}
+.jd_amount .amount_check {
+  width: 80px;
+  height: 62px;
+  position: absolute;
+  line-height: 60px;
+}
+.jd_amount .amount_check p {
+  padding-left: 2.5em;
+}
+.jd_amount .amount_info {
+  padding-left: 80px;
+  margin-top: 10px;
+}
+.jd_amount .amount_info p b {
+  font-weight: normal;
+  font-size: 16px;
+}
+.jd_amount .amount_submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 120px;
+  height: 62px;
+  background: #D8505C;
+  font-size: 20px;
+  line-height:62px;
+  text-align: center;
+  color: #fff;
+}
+.jd_amount .amount_submit span {
+  font-size: 12px;
+
+}
+/*弹出框*/
+.jd_win {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.4);
+  z-index: 1001;
+  top: 0;
+  display: none;
+}
+.jd_win .jd_win_box {
+  width: 85%;
+  position: absolute;
+  margin: auto;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: table;
+  background: #fff;
+
+}
+.jd_win .jd_win_box .win_text {
+  line-height: 75px;
+  color: #666;
+  text-align: center;
+  font-size: 16px;
+}
+.jd_win .no {
+  width: 45%;
+  height: 36px;
+  float: left;
+  margin-right: 10%;
+  background: #fff;
+  border-radius: 4px;
+  border:1px solid #E0E0E0;
+  text-align: center;
+  line-height: 36px;
+  color: #A9A9A9;
+}
+.jd_win .ok {
+  width: 45%;
+  height: 36px;
+  float: right;
+  background: #d8505c;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 36px;
+  color: #fff;
+}
+.confirm_box {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-top:1px solid #E0E0E0;
+}

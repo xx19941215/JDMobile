@@ -1,0 +1,103 @@
+/*满屏设置*/
+body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+/*搜索*/
+.jd_topBar form {
+    width: 100%;
+    padding: 0 40px;
+    height: 44px;
+}
+.jd_topBar form input {
+    width: 100%;
+    height: 30px;
+    border-radius: 2px;
+    margin-top: 7px;
+    border: 1px solid #BFBFBF;
+}
+
+/*分类主体*/
+.jd_category {
+    height: 100%;
+    width: 100%;
+    padding-top: 45px;
+    position: relative;;
+}
+.jd_category .jd_category_left {
+    width: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 45px;
+    z-index: 999;
+    height: 100%;
+}
+.jd_category .jd_category_left .jd_category_left_box {
+    width: 90px;
+    height: 100%;
+    overflow-y: hidden;
+}
+.jd_category .jd_category_left .jd_category_left_box ul {
+
+}
+.jd_category .jd_category_left .jd_category_left_box ul li {
+    width: 90px;
+    height: 50px;
+    background-color: #F3F4F6;
+    font-size: 12px;
+}
+.jd_category .jd_category_left .jd_category_left_box ul li.now {
+
+    background-color: #fff;
+}
+.jd_category .jd_category_left .jd_category_left_box ul li.now a {
+    color: #F15353;
+    border-right: none;
+}
+.jd_category .jd_category_left .jd_category_left_box ul li a {
+    width: 90px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    border-right:1px solid #E0E0E0;
+    border-bottom:1px solid #E0E0E0;
+
+}
+.jd_category .jd_category_right {
+    width: 100%;
+    padding-left: 90px;
+    height: 100%;
+    overflow-y: hidden;
+}
+.jd_category .jd_category_right .jd_category_right_box {
+    padding: 10px 12px;
+}
+.jd_category .jd_category_right .jd_category_right_box .r_banner a img {
+    width: 100%;
+}
+.jd_category .jd_category_right .jd_category_right_box .r_product {
+    margin-top: 20px;
+    font-size:12px;
+}
+.jd_category .jd_category_right .jd_category_right_box .r_product h3 {
+    color: #888;
+}
+.jd_category .jd_category_right .jd_category_right_box .r_product li {
+    width: 33.333%;
+    text-align: center;
+    float: left;
+}
+.jd_category .jd_category_right .jd_category_right_box .r_product li img {
+    display: block;
+    width: 62px;
+    height: 62px;
+    margin: 0 auto;
+}
+.jd_category .jd_category_right .jd_category_right_box .r_product li p {
+   line-height: 30px;
+}
